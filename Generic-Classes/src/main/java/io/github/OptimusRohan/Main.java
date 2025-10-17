@@ -5,8 +5,6 @@ import java.util.List;
 
 public class Main {
 
-
-
     public static int add(int a, int b) {
         return a+b;
     }
@@ -15,13 +13,21 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Integer a = 5;
-        Integer b = 6;
+
+        Integer a = 5; // boxed
+        Integer b = 6; // boxing
         Integer c = a+b;
         System.out.println(c);
+
         List<Integer> intArray = new ArrayList<>();
         intArray.add(12);
         intArray.add(76);
+
+        for (Integer myInt : intArray) {
+            Integer aa =2*myInt;
+            Integer bb = myInt*aa;
+            System.out.println(bb);
+        }
 
         Integer boxedInt = 5;
         Character boxedChar = 'a';
@@ -39,5 +45,6 @@ public class Main {
         for (String str : stringArray) {
             System.out.println(str);
         }
+
     }
 }
